@@ -1,0 +1,24 @@
+{
+  "id": "module-2/digital-twin",
+  "title": "Digital Twin - Simulation and Modeling",
+  "description": "A digital twin is a virtual representation of a physical system that mirrors the real-world counterpart throughout its lifecycle. In robotics, digital twins are crucial for testing, validation, and optimization.",
+  "source": "@site/docs/module-2/digital-twin.md",
+  "sourceDirName": "module-2",
+  "slug": "/module-2/digital-twin",
+  "permalink": "/docs/module-2/digital-twin",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/module-2/digital-twin.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "ROS 2 - Robot Operating System",
+    "permalink": "/docs/module-1/ros2"
+  },
+  "next": {
+    "title": "AI-Robot Brain - Perception and Decision Making",
+    "permalink": "/docs/module-3/ai-robot-brain"
+  }
+}

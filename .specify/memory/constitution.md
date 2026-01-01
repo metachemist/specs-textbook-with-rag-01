@@ -1,66 +1,63 @@
-<!--
-Version change: 0.0.0 → 1.0.0
-List of modified principles:
-- [PRINCIPLE_1_NAME] → I. AI-Native Content Creation
-- [PRINCIPLE_2_NAME] → II. Intelligent Querying (RAG Implementation)
-- [PRINCIPLE_3_NAME] → III. Agentic Workflow Integration
-- [PRINCIPLE_4_NAME] → IV. Identity & Profiling System
-- [PRINCIPLE_5_NAME] → V. Dynamic Personalization Engine
-- [PRINCIPLE_6_NAME] → VI. Localization & Accessibility
-- [SECTION_2_NAME] → Technical Boundaries & Constraints
-- [SECTION_3_NAME] → Success Criteria & Development Workflow
-
-Added sections:
-- Complete project-specific principles based on user input
-- Technical boundaries and constraints section
-- Success criteria and development workflow section
-
-Removed sections:
-- Template placeholder sections
-
-Templates requiring updates:
-- .specify/templates/plan-template.md ✅ reviewed - no changes needed
-- .specify/templates/spec-template.md ✅ reviewed - no changes needed
-- .specify/templates/tasks-template.md ✅ reviewed - no changes needed
-- .specify/templates/adr-template.md ✅ reviewed - no changes needed
-- .specify/templates/agent-file-template.md ✅ reviewed - no changes needed
-- .specify/templates/checklist-template.md ✅ reviewed - no changes needed
-
-No placeholders deferred - all template tokens have been replaced with project-specific content.
--->
-
-# Physical AI & Humanoid Robotics Constitution
+# Physical AI Textbook with RAG Constitution
 
 ## Core Principles
 
-### I. AI-Native Content Creation
-All content must be engineered as an "AI-Native" technical textbook that transcends static reading. The project will leverage Agentic AI to create a personalized, interactive, and multi-lingual learning experience, adhering strictly to the Panaversity Hackathon guidelines. Content must be designed from the ground up to work with AI systems for querying, personalization, and dynamic adaptation.
+### I. Agentic Development with Qwen CLI
+All development work must leverage Qwen CLI for automated code generation, task execution, and project management. The development process should be driven by specifications and task breakdowns that Qwen CLI can execute.
 
-### II. Intelligent Querying (RAG Implementation)
-The system must implement a robust RAG (Retrieval-Augmented Generation) Chatbot using OpenAI Agents/ChatKit, FastAPI, Neon, and Qdrant. This bot must answer questions based specifically on the book's content and user-selected text. All querying functionality must be embedded directly in the Docusaurus-based website to provide seamless user experience.
+### II. Decoupled Architecture
+The system must follow a decoupled architecture with a Docusaurus-based frontend for static content delivery and a FastAPI backend for dynamic AI-powered features. This ensures scalability, maintainability, and independent deployment of components.
 
-### III. Agentic Workflow Integration
-The project must demonstrate proof of using Claude Code Subagents and Agent Skills to generate or manage the book content. This includes leveraging AI agents for content creation, editing, and management processes. The agentic workflow must be clearly documented and demonstrated in the final deliverable.
+### III. Test-First (NON-NEGOTIABLE)
+TDD is mandatory: Tests must be written before implementation, ensuring they fail initially. The Red-Green-Refactor cycle must be strictly enforced for all features and bug fixes.
 
-### IV. Identity & Profiling System
-A functional Sign-up/Sign-in system using Better-Auth must be implemented that captures the user's software/hardware background. This system must be secure, reliable, and capture relevant profile information that will be used for content personalization. User privacy and data protection must be prioritized.
+### IV. AI-First Design
+The system must be designed from the ground up to work with AI systems for querying, personalization, and dynamic adaptation. All AI processing should leverage OpenRouter API with appropriate models.
 
-### V. Dynamic Personalization Engine
-The system must include a feature that rewrites/adjusts chapter content based on the user's profile. For example, highlighting "Edge Computing" for users with Jetson Kits vs. "Cloud" for AWS users. This personalization must be real-time and contextually appropriate to the user's technical background and preferences.
+### V. Spec-Driven Development
+All development must follow the Spec-Kit Plus methodology with clear specifications (spec.md), implementation plans (plan.md), and executable tasks (tasks.md). No development should proceed without proper specification.
 
-### VI. Localization & Accessibility
-The project must include a real-time "Translate to Urdu" button for chapter content, demonstrating localization capabilities. The system should be architected to support additional languages in the future. All content must be accessible and culturally appropriate for diverse audiences.
+### VI. TypeScript & Modern Tooling
+All new frontend code must be written in TypeScript to ensure type safety and better developer experience. Tailwind CSS should be used for styling to maintain consistent UI components.
 
-## Technical Boundaries & Constraints
+## Technology Stack Constraints
 
-The project must use Claude Code and Spec-Kit Plus for the creation process. The frontend must be built with Docusaurus (React-based SSG). The backend/AI stack must include FastAPI (Python) for the API layer, Neon Serverless Postgres for relational data, Qdrant Cloud (Free Tier) for vector storage, and OpenAI Agents SDK/ChatKit for the RAG pipeline. Better-Auth is strictly required for authentication to qualify for bonus points.
+### Frontend Requirements
+- **Framework**: Docusaurus for static site generation with React components
+- **Language**: TypeScript (not JavaScript)
+- **Styling**: Tailwind CSS (not Vanilla CSS)
+- **Components**: React-based with proper type definitions
 
-## Success Criteria & Development Workflow
+### Backend Requirements
+- **Framework**: FastAPI for Python-based API development
+- **Language**: Python 3.11+
+- **Database**: Neon Postgres for relational data, Qdrant for vector storage
+- **AI Services**: OpenRouter API integration with specified models
 
-To secure a potential win and the maximum score (300 Points), the final deliverable must meet specific criteria including Content Authority (Docusaurus-based website with 4 Modules), Intelligent Querying (embedded RAG Chatbot), Agentic Workflow (Claude Code Subagents), Identity & Profiling (Better-Auth), Dynamic Personalization, Localization, and proper Deployment on GitHub Pages or Vercel with a public GitHub repository. All features must be fully functional and well-integrated.
+### Development Tooling
+- **Primary Tool**: Qwen CLI for all development tasks and automation
+- **Spec Management**: Spec-Kit Plus for specification-driven development
+- **Version Control**: Git with proper branching and tagging strategies
+
+## Development Workflow
+
+### Specification Phase
+- All features must begin with a detailed specification document (spec.md)
+- User stories must be clearly defined with acceptance criteria
+- Technical requirements and constraints must be documented upfront
+
+### Planning Phase
+- Implementation plans (plan.md) must align with specifications
+- Architecture decisions must be documented and justified
+- Tech stack choices must follow constitution guidelines
+
+### Execution Phase
+- Tasks must be broken down in tasks.md with clear dependencies
+- Implementation must follow the defined phases (Setup → Foundational → User Stories → Polish)
+- All completed tasks must be marked with [X] in the tasks file
 
 ## Governance
 
-This constitution supersedes all other development practices for the Physical AI & Humanoid Robotics project. All amendments to these principles must be documented with clear justification and approval from project stakeholders. All pull requests and code reviews must verify compliance with these principles. The project must maintain alignment with Panaversity Hackathon guidelines throughout development. All development must follow the Spec-Driven Development (SDD) methodology as outlined in the project templates.
+The constitution supersedes all other development practices. Any amendments must be documented with proper justification, approval, and migration plan. All pull requests and code reviews must verify compliance with constitutional principles.
 
-**Version**: 1.0.0 | **Ratified**: 2025-01-01 | **Last Amended**: 2025-12-30
+**Version**: 1.0.0 | **Ratified**: 2026-01-01 | **Last Amended**: 2026-01-01
