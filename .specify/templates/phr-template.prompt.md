@@ -1,20 +1,20 @@
 ---
-id: "{{ID}}"
-title: "{{TITLE}}"
-stage: "{{STAGE}}"
-date: "{{DATE_ISO}}"
-surface: "{{SURFACE}}"
-model: "{{MODEL}}"
-feature: "{{FEATURE}}"
-branch: "{{BRANCH}}"
-user: "{{USER}}"
-command: "{{COMMAND}}"
+id: {{ID}}
+title: {{TITLE}}
+stage: {{STAGE}}
+date: {{DATE_ISO}}
+surface: {{SURFACE}}
+model: {{MODEL}}
+feature: {{FEATURE}}
+branch: {{BRANCH}}
+user: {{USER}}
+command: {{COMMAND}}
 labels: [{{LABELS}}]
 links:
-  spec: "{{LINKS_SPEC}}"
-  ticket: "{{LINKS_TICKET}}"
-  adr: "{{LINKS_ADR}}"
-  pr: "{{LINKS_PR}}"
+  spec: {{LINKS_SPEC}}
+  ticket: {{LINKS_TICKET}}
+  adr: {{LINKS_ADR}}
+  pr: {{LINKS_PR}}
 files:
 {{FILES_YAML}}
 tests:

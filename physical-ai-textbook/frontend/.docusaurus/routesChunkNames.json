@@ -1,0 +1,78 @@
+{
+  "/__docusaurus/debug-932": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugf-7-a-e6a"
+    }
+  },
+  "/__docusaurus/debug/config-5f8": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugf-7-a-e6a"
+    }
+  },
+  "/__docusaurus/debug/content-a26": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugf-7-a-e6a"
+    },
+    "allContent": "allContent---docusaurus-debug-content-246-9aa"
+  },
+  "/__docusaurus/debug/globalData-e0a": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugf-7-a-e6a"
+    }
+  },
+  "/__docusaurus/debug/metadata-493": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugf-7-a-e6a"
+    }
+  },
+  "/__docusaurus/debug/registry-df8": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugf-7-a-e6a"
+    }
+  },
+  "/__docusaurus/debug/routes-106": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugf-7-a-e6a"
+    }
+  },
+  "/docs-bf6": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---docs-87-e-003"
+    }
+  },
+  "/docs-64a": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "version": "version---docs-935-398"
+  },
+  "/docs-808": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/docs/intro-6e9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-intro-0-e-3-be1"
+  },
+  "/docs/module-1/ros2-80a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-module-1-ros-2-a-4-a-912"
+  },
+  "/docs/module-2/digital-twin-c35": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-module-2-digital-twind-0-c-259"
+  },
+  "/docs/module-3/ai-robot-brain-4de": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-module-3-ai-robot-braina-9-d-f5d"
+  },
+  "/docs/module-4/vla-d5c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-module-4-vla-29-f-a80"
+  }
+}

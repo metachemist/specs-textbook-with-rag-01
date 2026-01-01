@@ -1,0 +1,53 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "intro",
+              "path": "/docs/intro",
+              "sidebar": "docs"
+            },
+            {
+              "id": "module-1/ros2",
+              "path": "/docs/module-1/ros2",
+              "sidebar": "docs"
+            },
+            {
+              "id": "module-2/digital-twin",
+              "path": "/docs/module-2/digital-twin",
+              "sidebar": "docs"
+            },
+            {
+              "id": "module-3/ai-robot-brain",
+              "path": "/docs/module-3/ai-robot-brain",
+              "sidebar": "docs"
+            },
+            {
+              "id": "module-4/vla",
+              "path": "/docs/module-4/vla",
+              "sidebar": "docs"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "docs": {
+              "link": {
+                "path": "/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

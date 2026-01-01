@@ -65,7 +65,7 @@ Authenticate a user and return session token.
 ## RAG Chatbot Endpoints
 
 ### POST /api/chat
-Process a user query and return a response based on textbook content.
+Process a user query and return a response based on textbook content using OpenRouter API (Xiaomi MiMo-V2-Flash).
 
 **Request:**
 ```json
@@ -95,7 +95,7 @@ Process a user query and return a response based on textbook content.
 ## Personalization Endpoints
 
 ### POST /api/personalize
-Rewrite content based on user profile.
+Rewrite content based on user profile using OpenRouter API (Xiaomi MiMo-V2-Flash).
 
 **Request:**
 ```json
@@ -122,7 +122,7 @@ Rewrite content based on user profile.
 ## Localization Endpoints
 
 ### POST /api/translate
-Translate content to the target language.
+Translate content to the target language using OpenRouter API (Xiaomi MiMo-V2-Flash).
 
 **Request:**
 ```json
@@ -143,6 +143,28 @@ Translate content to the target language.
 ```json
 {
   "error": "Text and target_language are required"
+}
+```
+
+## OpenRouter-Specific Endpoints
+
+### POST /api/openrouter/test
+Test the OpenRouter integration with Xiaomi MiMo-V2-Flash model.
+
+**Request:**
+```json
+{
+  "prompt": "Hello, how are you?",
+  "model": "xiaomi/mimo-v2-flash:free"
+}
+```
+
+**Response (200):**
+```json
+{
+  "response": "I'm doing well, thank you for asking!",
+  "model_used": "xiaomi/mimo-v2-flash:free",
+  "tokens_used": 12
 }
 ```
 

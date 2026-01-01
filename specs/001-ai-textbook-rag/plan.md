@@ -11,14 +11,14 @@ This plan outlines the implementation of an AI-powered textbook with RAG capabil
 
 ## Technical Context
 
-**Language/Version**: Python 3.11 (for backend), JavaScript/TypeScript (for frontend), Claude Code (for agentic development)
-**Primary Dependencies**: Docusaurus (React-based SSG), FastAPI (Python), Better-Auth (authentication), Qdrant (vector DB), Neon Postgres (relational DB), OpenAI SDK (AI/LLM services)
-**Storage**: Neon Postgres for user profiles and authentication data, Qdrant Cloud for vector storage of textbook content for RAG functionality
+**Language/Version**: Python 3.11 (for backend), JavaScript/TypeScript (for frontend), Qwen CLI (for agentic development)
+**Primary Dependencies**: Docusaurus (React-based SSG), FastAPI (Python), Better-Auth (authentication), Qdrant (vector DB), Neon Postgres (relational DB), OpenRouter SDK (AI/LLM services), FastEmbed (local embeddings)
+**Storage**: Neon Postgres for user profiles and authentication data, Qdrant Cloud for vector storage of textbook content for RAG functionality using FastEmbed (Local/Qdrant) for embeddings
 **Testing**: pytest (for backend API tests), Jest (for frontend component tests), integration tests for RAG pipeline
 **Target Platform**: Web application (client-server architecture), deployable on GitHub Pages or Vercel
 **Project Type**: Web application (frontend + backend)
-**Performance Goals**: RAG chatbot responses within 5 seconds, Urdu translation within 10 seconds, 95% uptime during peak usage
-**Constraints**: Must use Claude Code and Spec-Kit Plus for creation process, Better-Auth for authentication to qualify for bonus points, Qdrant Cloud Free Tier for vector storage
+**Performance Goals**: RAG chatbot responses within 5 seconds using OpenRouter, Urdu translation within 10 seconds, 95% uptime during peak usage
+**Constraints**: Must use Qwen CLI and Spec-Kit Plus for creation process, Better-Auth for authentication to qualify for bonus points, Qdrant Cloud Free Tier for vector storage, OpenRouter with xiaomi/mimo-v2-flash:free model to ensure zero cost
 **Scale/Scope**: Support for 1000+ concurrent users, 4 curriculum modules, multi-language support (English/Urdu initially)
 
 ## Constitution Check
@@ -27,19 +27,19 @@ This plan outlines the implementation of an AI-powered textbook with RAG capabil
 
 Based on the project constitution, this plan must align with the following principles:
 - I. AI-Native Content Creation: The system will be designed from the ground up to work with AI systems for querying, personalization, and dynamic adaptation.
-- II. Intelligent Querying (RAG Implementation): The system will implement a robust RAG Chatbot using OpenAI, FastAPI, Neon, and Qdrant.
-- III. Agentic Workflow Integration: The project will demonstrate use of Claude Code Subagents for content generation and management.
+- II. Intelligent Querying (RAG Implementation): The system will implement a robust RAG Chatbot using OpenRouter API (Xiaomi MiMo-V2-Flash), FastAPI, Neon, and Qdrant.
+- III. Agentic Workflow Integration: The project will demonstrate use of Qwen CLI Subagents for content generation and management.
 - IV. Identity & Profiling System: A functional Sign-up/Sign-in system using Better-Auth will capture user's software/hardware background.
-- V. Dynamic Personalization Engine: The system will include a feature that rewrites/adjusts chapter content based on user profile.
-- VI. Localization & Accessibility: The project will include a real-time "Translate to Urdu" button for chapter content.
+- V. Dynamic Personalization Engine: The system will include a feature that rewrites/adjusts chapter content based on user profile using OpenRouter API (Xiaomi MiMo-V2-Flash).
+- VI. Localization & Accessibility: The project will include a real-time "Translate to Urdu" button for chapter content using OpenRouter API (Xiaomi MiMo-V2-Flash).
 
 **Post-Design Re-evaluation**: All constitutional principles are satisfied by the implemented architecture:
 - The hybrid static-dynamic architecture with Docusaurus and React components supports AI-native content creation
-- The RAG pipeline using OpenAI, FastAPI, Neon, and Qdrant is fully implemented
-- Claude Code is integrated for agentic development workflow
+- The RAG pipeline using OpenRouter API (Xiaomi MiMo-V2-Flash), FastAPI, Neon, and Qdrant is fully implemented
+- Qwen CLI is integrated for agentic development workflow
 - Better-Auth is implemented for identity and profiling
-- The personalization engine is designed to adapt content based on user profiles
-- The localization feature includes Urdu translation capability
+- The personalization engine is designed to adapt content based on user profiles using OpenRouter API
+- The localization feature includes Urdu translation capability using OpenRouter API
 
 ## Project Structure
 
@@ -60,7 +60,7 @@ specs/001-ai-textbook-rag/
 ```text
 physical-ai-textbook/
 ├── README.md               # Submission Requirement (Video link, etc.)
-├── .clauderc               # Proof of Agentic Workflow
+├── .qwenrc                 # Proof of Agentic Workflow
 ├── /docs                   # The Content (Docusaurus)
 │   ├── /intro              # Introduction & Hardware setup
 │   ├── /module-1           # ROS 2 Content
@@ -78,15 +78,15 @@ physical-ai-textbook/
 │   │   ├── main.py         # Entry point
 │   │   ├── /api            # Route handlers (chat, auth, personalize)
 │   │   ├── /core           # Config (Env vars, DB connection)
-│   │   ├── /services       # AI Logic (RAG pipeline, OpenAI wrapper)
+│   │   ├── /services       # AI Logic (RAG pipeline, OpenRouter wrapper)
 │   │   └── /models         # Pydantic schemas
 │   ├── requirements.txt
-│   └── .env                # API Keys (OpenAI, Qdrant, Neon)
+│   └── .env                # API Keys (OpenRouter, Qdrant, Neon)
 └── /scripts                # Utility scripts
-    └── ingest.py           # Script to read /docs and upload to Qdrant
+    └── ingest.py           # Script to read /docs and upload to Qdrant using FastEmbed for local embedding
 ```
 
-**Structure Decision**: Web application structure selected with separate frontend (Docusaurus) and backend (FastAPI) projects to handle static content delivery and dynamic AI-powered features respectively.
+**Structure Decision**: Web application structure selected with separate frontend (Docusaurus) and backend (FastAPI) projects to handle static content delivery and dynamic AI-powered features respectively, with OpenRouter integration for zero-cost AI operations using local embeddings via FastEmbed.
 
 ## Complexity Tracking
 

@@ -59,14 +59,16 @@
 
 Examples of foundational tasks (adjust based on your project):
 
-- [ ] T006 Setup database schema and migrations framework for Neon Postgres
-- [ ] T007 [P] Implement Better-Auth authentication framework in backend/
-- [ ] T008 [P] Setup API routing and middleware structure in backend/app/main.py
-- [ ] T009 Create User model in backend/app/models/user.py based on data-model.md
-- [ ] T010 Configure error handling and logging infrastructure in backend/app/core/
-- [ ] T011 Setup environment configuration management in backend/app/core/config.py
-- [ ] T012 Create basic Docusaurus configuration in frontend/docusaurus.config.js
-- [ ] T013 Setup Qdrant client connection in backend/app/core/qdrant_client.py
+- [X] T006 Setup database schema and migrations framework for Neon Postgres
+- [X] T007 [P] Implement authentication framework in backend/
+- [X] T008 [P] Setup API routing and middleware structure in backend/app/main.py
+- [X] T009 Create User model in backend/app/models/user.py based on data-model.md
+- [X] T010 Configure error handling and logging infrastructure in backend/app/core/
+- [X] T011 Setup environment configuration management in backend/app/core/config.py
+- [X] T012 Create basic Docusaurus configuration in frontend/docusaurus.config.js
+- [X] T013 Setup Qdrant client connection in backend/app/core/qdrant.py
+- [X] T014 [P] Update requirements.txt to include OpenRouter SDK and FastEmbed dependencies
+- [X] T015 Update .env.example to remove OPENAI_API_KEY and add OPENROUTER_API_KEY
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -82,69 +84,74 @@ Examples of foundational tasks (adjust based on your project):
 
 > **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
 
-- [ ] T014 [P] [US1] Contract test for POST /api/chat in backend/tests/contract/test_chat.py
-- [ ] T015 [P] [US1] Integration test for RAG pipeline in backend/tests/integration/test_rag_pipeline.py
+- [X] T014 [P] [US1] Contract test for POST /api/chat in backend/tests/contract/test_chat.py
+- [X] T015 [P] [US1] Integration test for RAG pipeline in backend/tests/integration/test_rag_pipeline.py
 
 ### Implementation for User Story 1
 
-- [ ] T016 [P] [US1] Create TextbookContent model in backend/app/models/textbook_content.py
-- [ ] T017 [P] [US1] Create ChatQueryRequest and ChatQueryResponse schemas in backend/app/models/schemas.py
-- [ ] T018 [US1] Implement RAG service in backend/app/services/rag_service.py (handles embedding, retrieval, generation)
-- [ ] T019 [US1] Implement POST /api/chat endpoint in backend/app/api/chat.py
-- [ ] T020 [US1] Create ingestion script scripts/ingest.py to read MDX files and store embeddings in Qdrant
-- [ ] T021 [US1] Add validation and error handling for chat queries
-- [ ] T022 [US1] Create ChatWidget React component in frontend/src/components/ChatWidget.js
-- [ ] T023 [US1] Integrate ChatWidget with Docusaurus pages
-- [ ] T024 [US1] Implement text selection and "Ask AI" functionality in frontend
+- [X] T016 [P] [US1] Create TextbookContent model in backend/app/models/textbook_content.py
+- [X] T017 [P] [US1] Create ChatQueryRequest and ChatQueryResponse schemas in backend/app/models/schemas.py
+- [X] T018 [US1] Implement OpenRouter service in backend/app/services/openrouter_service.py (handles communication with OpenRouter API)
+- [X] T019 [US1] Implement RAG service in backend/app/services/rag_service.py (handles embedding with FastEmbed, retrieval, generation via OpenRouter)
+- [X] T020 [US1] Implement POST /api/chat endpoint in backend/app/api/chat.py
+- [X] T021 [US1] Create ingestion script scripts/ingest.py to read MDX files and store embeddings in Qdrant using FastEmbed
+- [X] T022 [US1] Add validation and error handling for chat queries
+- [X] T023 [US1] Create ChatWidget React component in frontend/src/components/ChatWidget.tsx
+- [X] T024 [US1] Integrate ChatWidget with Docusaurus pages
+- [X] T025 [US1] Implement text selection and "Ask AI" functionality in frontend
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
 ---
 
-## Phase 4: User Story 2 - User Authentication & Profiling (Priority: P2)
+## Phase 4: User Story 2 - Personalization with OpenRouter (Priority: P2)
 
-**Goal**: Implement user registration and login with capture of software/hardware background information.
+**Goal**: Implement content personalization that adapts textbook content based on user's hardware profile using OpenRouter's Xiaomi MiMo-V2-Flash model.
 
-**Independent Test**: A user can sign up with email, provide programming experience and hardware background, and have this information stored in their profile.
+**Independent Test**: When a user clicks "Personalize for Me" on a chapter, the content rewrites to emphasize technologies and setup relevant to their profile using OpenRouter with Xiaomi MiMo-V2-Flash model.
 
 ### Tests for User Story 2 (OPTIONAL - only if tests requested) ⚠️
 
-- [ ] T025 [P] [US2] Contract test for POST /api/auth/register in backend/tests/contract/test_auth.py
-- [ ] T026 [P] [US2] Integration test for user registration flow in backend/tests/integration/test_auth_flow.py
+- [ ] T027 [P] [US2] Contract test for POST /api/personalize in backend/tests/contract/test_personalize.py
+- [ ] T028 [P] [US2] Integration test for personalization flow in backend/tests/integration/test_personalization.py
 
 ### Implementation for User Story 2
 
-- [ ] T027 [P] [US2] Create UserSession model in backend/app/models/user_session.py
-- [ ] T028 [US2] Implement POST /api/auth/register endpoint in backend/app/api/auth.py
-- [ ] T029 [US2] Implement POST /api/auth/login endpoint in backend/app/api/auth.py
-- [ ] T030 [US2] Add database schema for users table with background_software and background_hardware fields
-- [ ] T031 [US2] Create authentication middleware in backend/app/middleware/auth_middleware.py
-- [ ] T032 [US2] Add signup form component in frontend/src/components/AuthModal.js
-- [ ] T033 [US2] Add login button to Docusaurus navbar
-
-**Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
+- [ ] T029 [P] [US2] Create UserSession model in backend/app/models/user_session.py
+- [ ] T030 [US2] Implement POST /api/auth/register endpoint in backend/app/api/auth.py
+- [ ] T031 [US2] Implement POST /api/auth/login endpoint in backend/app/api/auth.py
+- [ ] T032 [US2] Add database schema for users table with background_software and background_hardware fields
+- [ ] T033 [US2] Create authentication middleware in backend/app/middleware/auth_middleware.py
+- [ ] T034 [US2] Add signup form component in frontend/src/components/AuthModal.js
+- [ ] T035 [US2] Add login button to Docusaurus navbar
+- [ ] T036 [US2] Create PersonalizationRequest and PersonalizationResponse schemas in backend/app/models/schemas.py
+- [ ] T037 [US2] Implement POST /api/personalize endpoint in backend/app/api/personalize.py
+- [ ] T038 [US2] Implement personalization service in backend/app/services/personalization_service.py using OpenRouter
+- [ ] T039 [US2] Add "Personalize for Me" button component in frontend/src/components/PersonalizeButton.js
+- [ ] T040 [US2] Connect personalization button to backend API
 
 ---
 
-## Phase 5: User Story 3 - Content Personalization (Priority: P3)
+## Phase 5: User Story 3 - Localization with OpenRouter (Priority: P3)
 
-**Goal**: Implement content personalization that adapts textbook content based on user's hardware profile.
+**Goal**: Implement Urdu translation functionality for textbook content using OpenRouter's Xiaomi MiMo-V2-Flash model.
 
-**Independent Test**: When a user clicks "Personalize for Me" on a chapter, the content rewrites to emphasize technologies and setup relevant to their profile.
+**Independent Test**: When a user clicks "Translate to Urdu" on a chapter, the content is translated to Urdu while maintaining technical accuracy using OpenRouter with Xiaomi MiMo-V2-Flash model.
 
 ### Tests for User Story 3 (OPTIONAL - only if tests requested) ⚠️
 
-- [ ] T034 [P] [US3] Contract test for POST /api/personalize in backend/tests/contract/test_personalize.py
-- [ ] T035 [P] [US3] Integration test for personalization flow in backend/tests/integration/test_personalization.py
+- [ ] T041 [P] [US3] Contract test for POST /api/translate in backend/tests/contract/test_translate.py
+- [ ] T042 [P] [US3] Integration test for translation flow in backend/tests/integration/test_translation.py
 
 ### Implementation for User Story 3
 
-- [ ] T036 [P] [US3] Create PersonalizationRequest and PersonalizationResponse schemas in backend/app/models/schemas.py
-- [ ] T037 [US3] Implement POST /api/personalize endpoint in backend/app/api/personalize.py
-- [ ] T038 [US3] Implement personalization service in backend/app/services/personalization_service.py
-- [ ] T039 [US3] Add "Personalize for Me" button component in frontend/src/components/PersonalizeButton.js
-- [ ] T040 [US3] Connect personalization button to backend API
-- [ ] T041 [US3] Implement caching for personalized content if needed
+- [ ] T043 [P] [US3] Create TranslationRequest and TranslationResponse schemas in backend/app/models/schemas.py
+- [ ] T044 [US3] Create TranslationCache model in backend/app/models/translation_cache.py
+- [ ] T045 [US3] Implement POST /api/translate endpoint in backend/app/api/translate.py
+- [ ] T046 [US3] Implement translation service in backend/app/services/translation_service.py using OpenRouter
+- [ ] T047 [US3] Add "Translate to Urdu" button component in frontend/src/components/TranslateButton.js
+- [ ] T048 [US3] Connect translation button to backend API with loading indicators
+- [ ] T049 [US3] Implement caching for translated content if needed
 
 **Checkpoint**: All user stories should now be independently functional
 
@@ -165,8 +172,8 @@ Examples of foundational tasks (adjust based on your project):
 
 - [ ] T044 [P] [US4] Create TranslationRequest and TranslationResponse schemas in backend/app/models/schemas.py
 - [ ] T045 [US4] Create TranslationCache model in backend/app/models/translation_cache.py
-- [ ] T046 [US4] Implement POST /api/translate endpoint in backend/app/api/translate.py
-- [ ] T047 [US4] Implement translation service in backend/app/services/translation_service.py
+- [ ] T046 [US4] Implement POST /api/translate endpoint in backend/app/api/translate.py using OpenRouter API (Xiaomi MiMo-V2-Flash)
+- [ ] T047 [US4] Implement translation service in backend/app/services/translation_service.py using OpenRouter API (Xiaomi MiMo-V2-Flash)
 - [ ] T048 [US4] Add "Translate to Urdu" button component in frontend/src/components/TranslateButton.js
 - [ ] T049 [US4] Connect translation button to backend API with loading indicators
 
@@ -184,10 +191,11 @@ Examples of foundational tasks (adjust based on your project):
 - [ ] T053 [P] Additional unit tests (if requested) in backend/tests/unit/
 - [ ] T054 Security hardening
 - [ ] T055 Run quickstart.md validation
-- [ ] T056 Create .clauderc file to demonstrate agentic workflow
+- [ ] T056 Create .qwenrc file to demonstrate agentic workflow
 - [ ] T057 Deploy frontend to Vercel
 - [ ] T058 Deploy backend to cloud platform
 - [ ] T059 Update README.md with deployment links and tech stack
+- [ ] T060 Create OpenRouter test endpoint POST /api/openrouter/test in backend/app/api/openrouter_test.py
 
 ---
 
@@ -207,7 +215,6 @@ Examples of foundational tasks (adjust based on your project):
 - **User Story 1 (P1)**: Can start after Foundational (Phase 2) - No dependencies on other stories
 - **User Story 2 (P2)**: Can start after Foundational (Phase 2) - May integrate with US1 but should be independently testable
 - **User Story 3 (P3)**: Depends on US2 (needs user profiles) and US1 (content exists)
-- **User Story 4 (P4)**: Can start after Foundational (Phase 2) - May integrate with US1 but should be independently testable
 
 ### Within Each User Story
 

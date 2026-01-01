@@ -1,0 +1,214 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "label": "Next",
+          "banner": null,
+          "badge": false,
+          "noIndex": false,
+          "className": "docs-version-current",
+          "path": "/docs",
+          "tagsPath": "/docs/tags",
+          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs",
+          "editUrlLocalized": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/i18n/en/docusaurus-plugin-content-docs/current",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "D:\\MyPrograms\\GenAI\\physical-ai-textbook-with-rag-01\\physical-ai-textbook\\frontend\\sidebars.js",
+          "contentPath": "D:\\MyPrograms\\GenAI\\physical-ai-textbook-with-rag-01\\physical-ai-textbook\\frontend\\docs",
+          "contentPathLocalized": "D:\\MyPrograms\\GenAI\\physical-ai-textbook-with-rag-01\\physical-ai-textbook\\frontend\\i18n\\en\\docusaurus-plugin-content-docs\\current",
+          "docs": [
+            {
+              "id": "intro",
+              "title": "Introduction",
+              "description": "Welcome to the Physical AI & Humanoid Robotics Textbook. This interactive textbook combines traditional learning materials with AI-powered features to enhance your understanding of physical AI concepts.",
+              "source": "@site/docs/intro.md",
+              "sourceDirName": ".",
+              "slug": "/intro",
+              "permalink": "/docs/intro",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/intro.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "docs",
+              "next": {
+                "title": "ROS 2 - Robot Operating System",
+                "permalink": "/docs/module-1/ros2"
+              }
+            },
+            {
+              "id": "module-1/ros2",
+              "title": "ROS 2 - Robot Operating System",
+              "description": "ROS 2 (Robot Operating System 2) is a flexible framework for writing robot software. It's a collection of tools, libraries, and conventions that aim to simplify the task of creating complex and robust robot behavior across a wide variety of robot platforms.",
+              "source": "@site/docs/module-1/ros2.md",
+              "sourceDirName": "module-1",
+              "slug": "/module-1/ros2",
+              "permalink": "/docs/module-1/ros2",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/module-1/ros2.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "docs",
+              "previous": {
+                "title": "Introduction",
+                "permalink": "/docs/intro"
+              },
+              "next": {
+                "title": "Digital Twin - Simulation and Modeling",
+                "permalink": "/docs/module-2/digital-twin"
+              }
+            },
+            {
+              "id": "module-2/digital-twin",
+              "title": "Digital Twin - Simulation and Modeling",
+              "description": "A digital twin is a virtual representation of a physical system that mirrors the real-world counterpart throughout its lifecycle. In robotics, digital twins are crucial for testing, validation, and optimization.",
+              "source": "@site/docs/module-2/digital-twin.md",
+              "sourceDirName": "module-2",
+              "slug": "/module-2/digital-twin",
+              "permalink": "/docs/module-2/digital-twin",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/module-2/digital-twin.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "docs",
+              "previous": {
+                "title": "ROS 2 - Robot Operating System",
+                "permalink": "/docs/module-1/ros2"
+              },
+              "next": {
+                "title": "AI-Robot Brain - Perception and Decision Making",
+                "permalink": "/docs/module-3/ai-robot-brain"
+              }
+            },
+            {
+              "id": "module-3/ai-robot-brain",
+              "title": "AI-Robot Brain - Perception and Decision Making",
+              "description": "The AI-Robot Brain encompasses the perception and decision-making systems that allow robots to understand their environment and make intelligent choices. This is the core of autonomous behavior.",
+              "source": "@site/docs/module-3/ai-robot-brain.md",
+              "sourceDirName": "module-3",
+              "slug": "/module-3/ai-robot-brain",
+              "permalink": "/docs/module-3/ai-robot-brain",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/module-3/ai-robot-brain.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "docs",
+              "previous": {
+                "title": "Digital Twin - Simulation and Modeling",
+                "permalink": "/docs/module-2/digital-twin"
+              },
+              "next": {
+                "title": "Vision-Language-Action - Advanced Robotics Applications",
+                "permalink": "/docs/module-4/vla"
+              }
+            },
+            {
+              "id": "module-4/vla",
+              "title": "Vision-Language-Action - Advanced Robotics Applications",
+              "description": "Vision-Language-Action (VLA) models represent the cutting edge of robotics AI, combining visual perception, language understanding, and action execution in unified models.",
+              "source": "@site/docs/module-4/vla.md",
+              "sourceDirName": "module-4",
+              "slug": "/module-4/vla",
+              "permalink": "/docs/module-4/vla",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/module-4/vla.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "docs",
+              "previous": {
+                "title": "AI-Robot Brain - Perception and Decision Making",
+                "permalink": "/docs/module-3/ai-robot-brain"
+              }
+            }
+          ],
+          "drafts": [],
+          "sidebars": {
+            "docs": [
+              {
+                "type": "category",
+                "label": "Introduction",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "intro"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Module 1: ROS 2",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "module-1/ros2"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Module 2: Digital Twin",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "module-2/digital-twin"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Module 3: AI-Robot Brain",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "module-3/ai-robot-brain"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Module 4: Vision-Language-Action",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "module-4/vla"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": []
+  },
+  "docusaurus-plugin-debug": {},
+  "docusaurus-theme-classic": {},
+  "docusaurus-bootstrap-plugin": {},
+  "docusaurus-mdx-fallback-plugin": {}
+}

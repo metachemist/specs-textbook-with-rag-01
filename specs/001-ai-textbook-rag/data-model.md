@@ -26,14 +26,14 @@ Represents a learner with profile information.
 - One-to-many with UserSession (user can have multiple sessions)
 
 ### Textbook Content
-Represents the curriculum content organized in modules, chapters, and text chunks stored in vector format for RAG retrieval.
+Represents the curriculum content organized in modules, chapters, and text chunks stored in vector format for RAG retrieval using FastEmbed.
 
 **Fields:**
 - `id`: UUID (Primary Key) - Unique identifier for the content chunk
 - `content`: String - The actual text content chunk
 - `page_url`: String - URL path to the page containing this content (e.g., "/module-1/ros2")
 - `chapter`: String - The chapter/module this content belongs to (e.g., "Module 1")
-- `embedding`: Vector - The vector embedding of the content for RAG retrieval
+- `embedding`: Vector - The vector embedding of the content using FastEmbed for RAG retrieval
 - `created_at`: DateTime - Timestamp when content was ingested
 - `updated_at`: DateTime - Timestamp when content was last updated
 
@@ -154,4 +154,24 @@ class TranslationRequest(BaseModel):
 ```python
 class TranslationResponse(BaseModel):
     translated_text: str
+```
+
+## OpenRouter-Specific Considerations
+
+### API Request Model
+```python
+class OpenRouterRequest(BaseModel):
+    model: str = "xiaomi/mimo-v2-flash:free"
+    messages: List[Dict[str, str]]
+    temperature: float = 0.7
+    max_tokens: Optional[int] = None
+```
+
+### API Response Model
+```python
+class OpenRouterResponse(BaseModel):
+    id: str
+    choices: List[Dict]
+    usage: Dict[str, int]
+    model: str
 ```

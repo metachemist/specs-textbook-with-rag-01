@@ -1,0 +1,121 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "docs": [
+      {
+        "type": "category",
+        "label": "Introduction",
+        "items": [
+          {
+            "type": "link",
+            "label": "Introduction",
+            "href": "/docs/intro",
+            "docId": "intro",
+            "unlisted": false
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "Module 1: ROS 2",
+        "items": [
+          {
+            "type": "link",
+            "label": "ROS 2 - Robot Operating System",
+            "href": "/docs/module-1/ros2",
+            "docId": "module-1/ros2",
+            "unlisted": false
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "Module 2: Digital Twin",
+        "items": [
+          {
+            "type": "link",
+            "label": "Digital Twin - Simulation and Modeling",
+            "href": "/docs/module-2/digital-twin",
+            "docId": "module-2/digital-twin",
+            "unlisted": false
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "Module 3: AI-Robot Brain",
+        "items": [
+          {
+            "type": "link",
+            "label": "AI-Robot Brain - Perception and Decision Making",
+            "href": "/docs/module-3/ai-robot-brain",
+            "docId": "module-3/ai-robot-brain",
+            "unlisted": false
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "Module 4: Vision-Language-Action",
+        "items": [
+          {
+            "type": "link",
+            "label": "Vision-Language-Action - Advanced Robotics Applications",
+            "href": "/docs/module-4/vla",
+            "docId": "module-4/vla",
+            "unlisted": false
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      }
+    ]
+  },
+  "docs": {
+    "intro": {
+      "id": "intro",
+      "title": "Introduction",
+      "description": "Welcome to the Physical AI & Humanoid Robotics Textbook. This interactive textbook combines traditional learning materials with AI-powered features to enhance your understanding of physical AI concepts.",
+      "sidebar": "docs"
+    },
+    "module-1/ros2": {
+      "id": "module-1/ros2",
+      "title": "ROS 2 - Robot Operating System",
+      "description": "ROS 2 (Robot Operating System 2) is a flexible framework for writing robot software. It's a collection of tools, libraries, and conventions that aim to simplify the task of creating complex and robust robot behavior across a wide variety of robot platforms.",
+      "sidebar": "docs"
+    },
+    "module-2/digital-twin": {
+      "id": "module-2/digital-twin",
+      "title": "Digital Twin - Simulation and Modeling",
+      "description": "A digital twin is a virtual representation of a physical system that mirrors the real-world counterpart throughout its lifecycle. In robotics, digital twins are crucial for testing, validation, and optimization.",
+      "sidebar": "docs"
+    },
+    "module-3/ai-robot-brain": {
+      "id": "module-3/ai-robot-brain",
+      "title": "AI-Robot Brain - Perception and Decision Making",
+      "description": "The AI-Robot Brain encompasses the perception and decision-making systems that allow robots to understand their environment and make intelligent choices. This is the core of autonomous behavior.",
+      "sidebar": "docs"
+    },
+    "module-4/vla": {
+      "id": "module-4/vla",
+      "title": "Vision-Language-Action - Advanced Robotics Applications",
+      "description": "Vision-Language-Action (VLA) models represent the cutting edge of robotics AI, combining visual perception, language understanding, and action execution in unified models.",
+      "sidebar": "docs"
+    }
+  }
+}
